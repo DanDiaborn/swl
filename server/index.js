@@ -14,20 +14,6 @@ const start = async () => {
     app.use(cors());
     app.use(express.json());
     await mongoose.connect("mongodb+srv://DanSher:tziO4kvuG0lQIvoN@cluster0.c9ughq4.mongodb.net/".concat("swl"));
-    // const article = new CommandCards([
-
-    // ]);
-
-    // await article.save();
-
-    // let testFind = await Units.find({});
-    // console.log(testFind);
-
-    // const f = async () => {
-    //   return await Units.find({});
-    // }
-
-    // console.log(f())
 
     app.get("/:faction/:type", (req, res) => {
       switch (req.params.type) {
