@@ -18,7 +18,7 @@ const start = async () => {
     app.get("/:faction/:type", (req, res) => {
       switch (req.params.type) {
         case "Units":
-          Units.find({ $or: [{ "faction": req.params.faction }, { "faction": "Generic" }] }).sort('expNum type name').then(result => {
+          Units.find({ $or: [{ "faction": req.params.faction }, { "faction": "Generic" }] }).sort('type expNum name').then(result => {
             res.json(result);
           })
           break;
