@@ -28,7 +28,7 @@ const start = async () => {
           })
           break;
         case "Upgrades":
-          Upgrades.find({ $or: [{ "faction": req.params.faction }, { "faction": "Generic" }] }).sort('date type name restrictions').then(result => {
+          Upgrades.find({ $or: [{ "faction": req.params.faction }, { "faction": "Generic" }] }).sort('type date name restrictions').then(result => {
             res.json(result);
           })
           break;
